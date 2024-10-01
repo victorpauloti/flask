@@ -25,7 +25,7 @@ def index():
 # rota novo cadastro
 @app.route('/novo')
 def novo():
-    if 'usuario_logaodo' not in session or session['usuario_logado'] == None:
+    if 'usuario_logaodo' not in session or session['usuario_logado'] == None: # fluxo de login
         return redirect('/login')
     return render_template('novo.html', titulo='Novo Jogo')
 
