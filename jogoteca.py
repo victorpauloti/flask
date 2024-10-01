@@ -20,12 +20,13 @@ app.secret_key = 'vpaulo'
 # criar rota e uma função 
 @app.route('/')
 def index():
-
     return render_template('lista.html', titulo='JOGOS', jogos=lista)
 
 # rota novo cadastro
 @app.route('/novo')
 def novo():
+    if 'usuario_logaodo' not in session or session['usuario_logado'] == None:
+        return redirect('/login')
     return render_template('novo.html', titulo='Novo Jogo')
 
 #Rota para criar um novo jogo
