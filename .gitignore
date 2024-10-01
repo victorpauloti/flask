@@ -2,6 +2,7 @@ instance/*
 !instance/.gitignore
 .webassets-cache
 .env
+.env/
 bkp/
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Flask
